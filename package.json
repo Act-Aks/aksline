@@ -8,7 +8,10 @@
     "start": "expo start",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "cmt": "bunx git-cz",
+    "tsc": "tsc --noEmit",
+    "preinstall": "bunx only-allow bun"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
@@ -50,5 +53,9 @@
       ]
     }
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "bun": ">=1.1.13"
+  },
+  "packageManager": "bun@1.1.13"
 }
